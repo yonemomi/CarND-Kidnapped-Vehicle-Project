@@ -177,6 +177,8 @@ vector<LandmarkObs> transform_coordinate_vehicle_2_map(vector<LandmarkObs> obser
 
 double calculate_particle_final_weight(vector<LandmarkObs> predictions, vector<LandmarkObs> observations, double std_landmark[])
 {
+  double weight = 1.0;
+
   for (int i = 0; i < observations.size(); ++i)
   {
     int obs_id = observations[i].id;
@@ -189,11 +191,11 @@ double calculate_particle_final_weight(vector<LandmarkObs> predictions, vector<L
     /* Weight caluclation for specific particle*/
     double first_term = (2 * M_PI * std_landmark[0] * std_landmark[1]);
     double second_term = exp(-1 * (((dx * dx) / (2 * std_landmark[0] * std_landmark[0])) + ((dy * dy) / (2 * std_landmark[1] * std_landmark[1]))));
-    double weight = second_term / first_term;
+    weight *= second_term / first_term;
     // std::cout << "******"
     // << "caluculate_particle_final_weight:" << weight << "First: " << first_term << "Second: " << second_term << std::endl;
-    return weight;
   }
+  return weight;
 }
 
 void ParticleFilter::normalize_particle_weights()
