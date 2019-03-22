@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/build",
+  "command": "/usr/bin/c++    -Wall   -std=c++11 -o CMakeFiles/particle_filter.dir/src/particle_filter.cpp.o -c /home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/src/particle_filter.cpp",
+  "file": "/home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/src/particle_filter.cpp"
+},
+{
+  "directory": "/home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/build",
+  "command": "/usr/bin/c++    -Wall   -std=c++11 -o CMakeFiles/particle_filter.dir/src/main.cpp.o -c /home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/src/main.cpp",
+  "file": "/home/cyonemori/projects/CarND-Kidnapped-Vehicle-Project/src/main.cpp"
+}
+]
